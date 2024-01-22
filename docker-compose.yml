@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  wsdiracservice:
+    container_name: wspruebatecnica
+    restart: always
+    build:
+      context: ./
+      dockerfile: ./PruebaTecnica.Service/Dockerfile
+    ports:
+      - "7780:80"
+    environment:  
+      ASPNETCORE_ENVIRONMENT: Development 
